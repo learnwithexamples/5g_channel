@@ -1,0 +1,29 @@
+{
+  "name": "5g-channel",
+  "version": "0.0.0",
+  "description": "5G NR Channel Model",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnwithexamples/5g_channel.git"
+  },
+  "keywords": [
+    "3GPP",
+    "5G",
+    "New Radio",
+    "Channel Model",
+    "Pathloss"
+  ],
+  "author": "Learn with Examples",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learnwithexamples/5g_channel/issues"
+  },
+  "homepage": "https://github.com/learnwithexamples/5g_channel#readme",
+  "dependencies": {
+  }
+}
