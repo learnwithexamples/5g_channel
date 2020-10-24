@@ -19,7 +19,7 @@ const pr_los_inh = (type, d_2d_in) => type === 'mixed' ? pr_los_inh_mixed(d_2d_i
 
 const pr_los_inf = (type, d_2d, h_BS = 3, h_UT = 1.5, h_c = 5, r = 0.4) => {
   if (type === 'hh') return 1;
-  assert(0 <= hc && h_c <= 10);
+  assert(0 <= h_c && h_c <= 10);
   assert((type.toLowerCase() === 'sl' && r < 0.4) || (type.toLowerCase() === 'dl' && r >= 0.4) || (type.toLowerCase() === 'sh' && r < 0.4) || (type.toLowerCase() === 'dh' && r >= 0.4));
   const types = ['sl', 'dl', 'sh', 'dh', 'hh'];
   const d_clutters = [10, 2, 10, 2, null];
