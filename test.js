@@ -2,8 +2,6 @@ const assert = require('assert');
 const { pathloss_rma_los, pathloss_rma_nlos, pathloss_rma, pathloss_uma_los, pathloss_uma_nlos, pathloss_uma, pathloss_umi_los, pathloss_umi_nlos, pathloss_umi, pathloss_inh_los, pathloss_inh_nlos, pathloss_inh, pathloss_inf_los, pathloss_inf_nlos, pathloss_inf, pathloss } = require('./pathloss');
 const { pr_los_rma, pr_los_umi, pr_los_uma, pr_los_inh_mixed, pr_los_inh_open, pr_los_inf } = require('./probability_los');
 
-console.log(pathloss_rma_los(2, 100))
-
 // RMa
 console.log(pathloss_rma(2, 800, 35, 1.5, 20, 5))
 console.log(pathloss_rma_los(2, 800, 35, 1.5, 20, 5))
@@ -37,3 +35,16 @@ console.log(pathloss_inf(2, 80, 3, 1.5, 5, 0.7, 'dl'));
 console.log(pathloss_inf(2, 80, 3, 1.5, 5, 0.3, 'sh'));
 console.log(pathloss_inf(2, 80, 3, 1.5, 5, 0.7, 'dh'));
 console.log(pathloss_inf(2, 80, 3, 1.5, 5, 0.3, 'hh'));
+
+
+// probability
+console.log(pr_los_rma(800));
+console.log(pr_los_umi(800));
+console.log(pr_los_uma(800, 1.5));
+console.log(pr_los_inh_mixed(80));
+console.log(pr_los_inh_open(80));
+console.log(pr_los_inf('sl', 30, 3, 1.5, 3, 0.3));
+console.log(pr_los_inf('dl', 30, 3, 1.5, 3, 0.7));
+console.log(pr_los_inf('sh', 30, 10, 1.5, 8, 0.3));
+console.log(pr_los_inf('dh', 30, 10, 1.5, 8, 0.7));
+console.log(pr_los_inf('hh', 30, null, null, null));
