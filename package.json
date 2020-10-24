@@ -1,6 +1,6 @@
 {
   "name": "5g-channel",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "5G NR Channel Model",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "5G",
     "New Radio",
     "Channel Model",
-    "Pathloss"
+    "Pathloss",
+    "LOS probability"
   ],
   "author": "Learn with Examples",
   "license": "ISC",
