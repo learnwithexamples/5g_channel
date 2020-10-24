@@ -17,7 +17,7 @@ const pr_los_inh_open = d_2d_in => d_2d_in <= 5 ? 1 : d_2d_in <= 49 ? Math.exp(-
 
 const pr_los_inh = (type, d_2d_in) => type === 'mixed' ? pr_los_inh_mixed(d_2d_in) : pr_los_inh_open(d_2d_in);
 
-const pr_los_inf = (type, d_2d, h_c, r, h_BS = 3, h_UT = 1.5) => {
+const pr_los_inf = (type, d_2d, h_BS = 3, h_UT = 1.5, h_c = 5, r = 0.4) => {
   if (type === 'hh') return 1;
   assert(0 <= hc && h_c <= 10);
   assert((type.toLowerCase() === 'sl' && r < 0.4) || (type.toLowerCase() === 'dl' && r >= 0.4) || (type.toLowerCase() === 'sh' && r < 0.4) || (type.toLowerCase() === 'dh' && r >= 0.4));
