@@ -8,21 +8,24 @@
   Option 1: import all functions
 
   `const g5_channel = require('5g-channel');`
+
   `g5_channel.pathloss.pathloss_rma_los(2, 400); // 2 GHz, 400m distance`
+
   `g5_channel.prLos.pr_los_rma(400);`
 
   Option 2: selective import
 
   `const { pathloss_rma_los } = require('5g-channel/pathloss');`
+
   `pathloss_rma_los(2, 400)`
 
 # Includes: pathloss and line-of-sight probability for the following scenarios
   ## Rural Macro
-  LOS probability: `pr_los_rma(d_2d_out)`
-  Pathloss: 
-  - LOS: `pathloss_rma_los(fc, d_2D, h_BS, h_UT, W, h)`
-  - NLOS: `pathloss_rma_nlos(fc, d_2D, h_BS, h_UT, W, h)`
-  - Average: `pathloss_rma(fc, d_2D, h_BS, h_UT, W, h)`
+  - LOS probability: `pr_los_rma(d_2d_out)`
+  - Pathloss: 
+    - LOS: `pathloss_rma_los(fc, d_2D, h_BS, h_UT, W, h)`
+    - NLOS: `pathloss_rma_nlos(fc, d_2D, h_BS, h_UT, W, h)`
+    - Average: `pathloss_rma(fc, d_2D, h_BS, h_UT, W, h)`
 
   ## Urban Macro
   - LOS probability: `pr_los_uma(d_2d_out, h_UT)`
